@@ -6,6 +6,11 @@
       "name": "电影天堂资源",
       "detail": "http://caiji.dyttzyapi.com"
     },
+      "dbzy.tv": {
+      "name": "🎬豆瓣资源",
+      "api": "https://caiji.dbzy5.com/api.php/provide/vod",
+      "detail": "https://dbzy.tv"
+    },
     "heimuer": {
       "api": "https://json.heimuer.xyz/api.php/provide/vod",
       "name": "黑木耳",
@@ -18,6 +23,7 @@
     "bfzy": {
       "api": "https://bfzyapi.com/api.php/provide/vod",
       "name": "暴风资源"
+      "detail": "https://bfzy.tv"
     },
     "tyyszy": {
       "api": "https://tyyszy.com/api.php/provide/vod",
@@ -34,7 +40,8 @@
     },
     "iqiyi": {
       "api": "https://www.iqiyizyapi.com/api.php/provide/vod",
-      "name": "iqiyi资源"
+      "name": "爱奇艺"
+      "detail": "https://www.iqiyizyapi.com"      
     },
     "wolong": {
       "api": "https://wolongzyw.com/api.php/provide/vod",
@@ -84,6 +91,11 @@
     "xiaomaomi": {
       "api": "https://zy.xmm.hk/api.php/provide/vod",
       "name": "小猫咪资源"
+    },      
+    "jinyingzy.com": {
+      "name": "🎬金鹰点播",
+      "api": "https://jinyingzy.com/api.php/provide/vod",
+      "detail": "https://jinyingzy.com"
     }
   }
 }
