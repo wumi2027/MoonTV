@@ -13,7 +13,7 @@
     },
     "iqiyi": {
       "api": "https://www.iqiyizyapi.com/api.php/provide/vod",
-      "name": "爱奇艺"
+      "name": "爱奇艺",
       "detail": "https://www.iqiyizyapi.com"      
     },
     "heimuer": {
