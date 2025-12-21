@@ -11,19 +11,23 @@
       "api": "https://caiji.dbzy5.com/api.php/provide/vod",
       "detail": "https://dbzy.tv"
     },
+    "iqiyi": {
+      "api": "https://www.iqiyizyapi.com/api.php/provide/vod",
+      "name": "爱奇艺",
+      "detail": "https://www.iqiyizyapi.com"      
+    },
     "heimuer": {
       "api": "https://json.heimuer.xyz/api.php/provide/vod",
       "name": "黑木耳",
       "detail": "https://heimuer.tv"
     },
     "ruyi": {
-      "api": "https://cj.rycjapi.com/api.php/provide/vod",
+      "api": "http://cj.rycjapi.com/api.php/provide/vod",
       "name": "如意资源"
     },
     "bfzy": {
       "api": "https://bfzyapi.com/api.php/provide/vod",
       "name": "暴风资源"
-      "detail": "https://bfzy.tv"
     },
     "tyyszy": {
       "api": "https://tyyszy.com/api.php/provide/vod",
@@ -38,10 +42,9 @@
       "api": "https://360zy.com/api.php/provide/vod",
       "name": "360资源"
     },
-    "iqiyi": {
-      "api": "https://www.iqiyizyapi.com/api.php/provide/vod",
-      "name": "爱奇艺"
-      "detail": "https://www.iqiyizyapi.com"      
+    "maotaizy": {
+      "api": "https://caiji.maotaizy.cc/api.php/provide/vod",
+      "name": "茅台资源"
     },
     "wolong": {
       "api": "https://wolongzyw.com/api.php/provide/vod",
@@ -88,15 +91,15 @@
       "api": "https://cj.lziapi.com/api.php/provide/vod",
       "name": "量子资源站"
     },
-    "xiaomaomi": {
-      "api": "https://zy.xmm.hk/api.php/provide/vod",
-      "name": "小猫咪资源"
-    },      
     "jinyingzy.com": {
       "name": "🎬金鹰点播",
       "api": "https://jinyingzy.com/api.php/provide/vod",
       "detail": "https://jinyingzy.com"
-    },      
+    },
+    "xiaomaomi": {
+      "api": "https://zy.xmm.hk/api.php/provide/vod",
+      "name": "小猫咪资源"
+    },
     "91md.me": {
       "name": "🔞麻豆视频",
       "api": "https://91md.me/api.php/provide/vod",
