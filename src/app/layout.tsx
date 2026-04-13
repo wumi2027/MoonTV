@@ -11,13 +11,14 @@ import { ThemeProvider } from '../components/ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
+// 强制为动态渲染，确保每次请求都从数据库读取最新配置
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 // 动态生成 metadata，支持配置更新后的标题变化
 export async function generateMetadata(): Promise<Metadata> {
-  let siteName = process.env.SITE_NAME || '云朵TV';
-  if (process.env.NEXT_PUBLIC_STORAGE_TYPE !== 'd1') {
-    const config = await getConfig();
-    siteName = config.SiteConfig.SiteName;
-  }
+  const config = await getConfig();
+  const siteName = config.SiteConfig.SiteName || process.env.SITE_NAME || '云朵TV';
 
   return {
     title: siteName,
@@ -35,19 +36,15 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  let siteName = process.env.SITE_NAME || '云朵TV';
-  let announcement =
+  // 统一调用 getConfig 获取配置，getConfig 内部已处理 D1/Docker 逻辑
+  const config = await getConfig();
+  
+  const siteName = config.SiteConfig.SiteName || process.env.SITE_NAME || '云朵TV';
+  const announcement = config.SiteConfig.Announcement || 
     process.env.ANNOUNCEMENT ||
     '本网站仅提供影视信息搜索服务，所有内容均来自第三方网站。本站不存储任何视频资源，不对任何内容的准确性、合法性、完整性负责。';
-  let enableRegister = process.env.NEXT_PUBLIC_ENABLE_REGISTER === 'true';
-  let imageProxy = process.env.NEXT_PUBLIC_IMAGE_PROXY || '';
-  if (process.env.NEXT_PUBLIC_STORAGE_TYPE !== 'd1') {
-    const config = await getConfig();
-    siteName = config.SiteConfig.SiteName;
-    announcement = config.SiteConfig.Announcement;
-    enableRegister = config.UserConfig.AllowRegister;
-    imageProxy = config.SiteConfig.ImageProxy;
-  }
+  const enableRegister = config.UserConfig.AllowRegister ?? (process.env.NEXT_PUBLIC_ENABLE_REGISTER === 'true');
+  const imageProxy = config.SiteConfig.ImageProxy || process.env.NEXT_PUBLIC_IMAGE_PROXY || '';
 
   // 将运行时配置注入到全局 window 对象，供客户端在运行时读取
   const runtimeConfig = {
